@@ -15,9 +15,8 @@
             color: #004d00;
             text-align: center;
         }
-
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
             z-index: 1000;
             background-color: #006600;
@@ -29,29 +28,24 @@
             justify-content: space-between;
             flex-wrap: wrap;
         }
-
         header .logo-container {
             display: flex;
             align-items: center;
         }
-
         header .logo-container img {
             height: 60px;
             margin-right: 10px;
         }
-
         header .logo-container h1 {
             font-size: 1.5rem;
             margin: 0;
         }
-
         header nav {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
         }
-
         header nav a {
             color: white;
             text-decoration: none;
@@ -61,43 +55,10 @@
             border-radius: 5px;
             font-size: 0.9rem;
         }
-
         header nav a:hover {
             background-color: white;
             color: #004d00;
         }
-
-        /* Estilos para el menú móvil */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .menu-mobile {
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            background-color: #004d00;
-            padding: 10px 20px;
-        }
-
-        .menu-mobile a {
-            font-size: 0.9rem;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 5px;
-        }
-
-        .menu-mobile a:hover {
-            background-color: white;
-            color: #004d00;
-        }
-
-        /* Hero */
         .hero {
             background-image: url('hero.jpg');
             background-size: cover;
@@ -105,43 +66,117 @@
             color: #004d00;
             padding: 80px 20px;
         }
-
         .hero h1 {
             font-size: 2.5rem;
         }
-
         .hero p {
             font-size: 1.2rem;
         }
-
-        /* Media Queries */
+        .municipalidad-imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .municipalidad-imagenes img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #004d00;
+        }
+        .sections {
+            padding: 30px 20px;
+            border-bottom: 1px solid #004d00;
+        }
+        .sections h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .sections p, .sections ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            border: 1px solid #004d00;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+        }
+        .card .content {
+            padding: 15px;
+        }
+        footer {
+            background-color: #003300;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .contact-info, .menu {
+            padding: 20px;
+            background-color: #e6ffe6;
+            border: 1px solid #004d00;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .contact-info h3, .menu h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .menu ul, .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu ul li, .contact-info ul li {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        .contact-info ul li a {
+            color: #004d00;
+            text-decoration: none;
+        }
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
+                text-align: center;
             }
-
             header .logo-container h1 {
-                font-size: 1.2rem;
+                font-size: 2rem;
             }
-
             header nav {
-                display: none;
+                flex-direction: column;
+                gap: 5px;
             }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .menu-mobile {
-                display: flex;
-            }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero p {
                 font-size: 1rem;
+            }
+            .municipalidad-imagenes img {
+                max-width: 100%;
+            }
+            .sections p, .sections ul {
+                font-size: 0.9rem;
+            }
+            .card {
+                width: 100%;
             }
         }
     </style>
@@ -161,38 +196,86 @@
             <a href="#miembros">Miembros</a>
             <a href="#emergencias">Emergencias</a>
         </nav>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
     </header>
-    <div class="menu-mobile">
-        <a href="#inicio">Inicio</a>
-        <a href="#mision-vision">Misión y Visión</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#miembros">Miembros</a>
-        <a href="#emergencias">Emergencias</a>
-    </div>
-
+    <section class="municipalidad-imagenes">
+        <img src="img/imgen1.jpg" alt="Imagen 1 de la Municipalidad">
+        <img src="img/imghuertas.jpg" alt="Imagen 2 de la Municipalidad">
+        <img src="img/img03.jpg" alt="Imagen 3 de la Municipalidad">
+    </section>
     <section class="hero">
         <h1>Bienvenidos a Huertas</h1>
         <p>En Huertas, trabajamos con pasión y compromiso para el desarrollo integral de nuestro distrito.</p>
+        <p>Nos esforzamos por mejorar la calidad de vida de nuestros ciudadanos, fomentando la educación,</p>
+        <p>el progreso económico, y el cuidado del medio ambiente.</p>
+        <p>Unidos por un futuro mejor, promovemos la participación activa de la comunidad, apoyamos</p>
+        <p>proyectos innovadores, y celebramos nuestras tradiciones culturales.</p>
+        <p>¡Gracias por ser parte de este viaje hacia el crecimiento sostenible y la prosperidad!</p>
     </section>
+    <section class="sections" id="mision-vision">
+        <h2>Misión y Visión</h2>
+        <p><strong>Misión:</strong> "Promover el desarrollo sostenible del distrito de Huertas mediante la gestión eficiente de los recursos, el fortalecimiento de la participación ciudadana y la implementación de políticas inclusivas que garantizan bienestar, equidad y calidad de vida para todos sus habitantes."</p>
+        <p><strong>Visión:</strong> "Ser un modelo de gestión local en la región, reconocido por su compromiso con la transparencia, la innovación y el desarrollo humano, contribuyendo al progreso integral y la preservación del patrimonio cultural y natural de Huertas."</p>
+    </section>
+    <section class="sections" id="noticias">
+        <h2>Noticias Recientes</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/noticia01.jpg" alt="Noticia 1">
+                <div class="content">
+                    <h3>Instalación y Juramentación del Comité Distrital de Seguridad Ciudadana</h3>
+                    <p>Este 08 de enero ejecutamos la instalación y juramentación de nuestro Comité Distrital de Seguridad Ciudadana en cumplimiento de la Ley N° 27933, Ley del Sistema Nacional de Seguridad Ciudadana.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/noticia2.jpg" alt="Noticia 2">
+                <div class="content">
+                    <h3>Comunicado</h3>
+                    <p>A la población del Distrito de Huertas: informamos que, debido a una obstrucción en la tubería del anexo de Quero-Molinos, se está trabajando para solucionar el problema de agua potable en los próximos días.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sections" id="servicios">
+        <h2>Servicios</h2>
+        <ul>
+            <li>Atención al ciudadano: Orientación y resolución de trámites municipales.</li>
+            <li>Trámites municipales: Gestión de licencias, permisos y registros.</li>
+            <li>Gestión ambiental: Proyectos de conservación y reciclaje.</li>
+            <li>Proyectos de infraestructura: Mejora de vías, parques y espacios públicos.</li>
+            <li>Capacitaciones: Talleres educativos y programas comunitarios.</li>
+        </ul>
+    </section>
+    <section class="sections" id="miembros">
+        <h2>Miembros de la Municipalidad</h2>
+        <ul>
+            <li><strong>Alcalde:</strong> Roly Nicodemus Salazar Espinoza</li>
+            <li><strong>Regidores:</strong>
+                <ul>
+                    <li>Juan Pablo Vivanco Aranda</li>
+                    <li>Jenny Raquel Castillo Chuquín</li>
+                    <li>Juver Ricardo Baldeón Torres</li>
+                    <li>Yolanda Yuvisa Suárez Ambolaya</li>
+                    <li>Líder Tomás Baldeón Ramírez</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="contact-info" id="contacto">
+        <h3>Contacto</h3>
+        <p><strong>Horario de Atención:</strong> Lunes a Viernes, de 8:00 AM a 4:00 PM</p>
+        <ul>
+            <li><strong>Teléfono:</strong> <a href="tel:+51936841905"><i class="fas fa-phone"></i> 936-841-905</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/51936841905" target="_blank"><i class="fab fa-whatsapp"></i> 936-841-905</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100089820420621" target="_blank"><i class="fab fa-facebook"></i> Municipalidad de Huertas</a></li>
+            <li><strong>Correo Electrónico:</strong> <a href="mailto:huertasmunicipalidad@gmail.com"><i class="fas fa-envelope"></i> huertasmunicipalidad@gmail.com</a></li>
+        </ul>
+    </section>
+    <section class="menu" id="emergencias">
+        <h3>Números de Emergencia</h3>
+        <ul>
+            <li><strong>Municipalidad Distrital de Huertas:</strong> <a href="tel:+51936841905"><i class="fas fa-phone"></i> 936-841-905</a></li>
+            <li><strong>Comisaría PNP-Jauja:</strong> <a href="tel:+5164362208"><i class="fas fa-phone"></i> 64-362208</
 
-    <footer>
-        <p>&copy; 2025 Municipalidad Distrital de Huertas. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuMobile = document.querySelector('.menu-mobile');
-        menuToggle.addEventListener('click', () => {
-            menuMobile.style.display = menuMobile.style.display === 'flex' ? 'none' : 'flex';
-        });
-    </script>
-</body>
-</html>
 
 
 
